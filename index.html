@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form class="wrapper">
+        <input type="text" id="result" readonly>
+        <label>Enter first number<input class="white" id="number1"></label>
+        <label>Select operator u need<select id="operators">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="x">x</option>
+        </select>     
+        </label>
+        <label>Enter second number<input class="white" id="number2"></label>
+        <input type="button" value="=" onclick="calc()" id="btn"></input>
+    </form>
+    <div class="bubbles">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+        <span class="four"></span>
+        <span class="five"></span>
+        <span class="six"></span>
+        <span class="seven"></span>
+        <span class="eight"></span>
+    </div>
+    <script src="./app.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector(".wrapper"), {
+    max: 25,
+    speed: 400
+});
+    </script>
+</body>
+</html>
